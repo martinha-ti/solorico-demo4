@@ -110,18 +110,31 @@
             padding-top: 20px;
             font-size: 0.875rem;
         }
-    </style>
 
+        .image-container {
+            position: relative;
+            margin-bottom: 25px;
+        }
+    </style>
     <script>
-        document.querySelectorAll('.navbar-collapse .nav-link').forEach(link => {
-            link.addEventListener('click', function () {
-                let navbar = document.querySelector('.navbar-collapse');
-                if (navbar.classList.contains('show')) {
-                    new bootstrap.Collapse(navbar).hide();
-                }
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.getElementById('navbarNav');
+
+            document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    const isNavbarExpanded = window.getComputedStyle(navbarToggler).display !== 'none' &&
+                        navbarCollapse.classList.contains('show');
+
+                    if (isNavbarExpanded) {
+                        navbarToggler.click(); // Fecha o menu
+                    }
+                });
             });
         });
     </script>
+
+
 
 </head>
 
@@ -196,7 +209,7 @@
                 <div class="carousel-overlay"></div>
                 <div class="carousel-content">
                     <h1>Cultivando soluções para uma agricultura de excelência</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Lado a lado com o produtor rural</p>
                     <a href="https://wa.me/551732316000" target="_blank" class="btn btn-success">Conheça</a>
 
                 </div>
@@ -233,7 +246,7 @@
     </div>
 
     <!-- Agricultura & Produtos -->
-    <section class="agriculture-section py-5">
+    <section class="agriculture-section py-5" style="padding: 5rem 0 !important;">
         <div class="container">
             <div class="row align-items-center">
                 <!-- Imagens (Esquerda) -->
@@ -282,18 +295,18 @@
 
 
     <!-- Seção de Cards -->
-    <div class="container py-4">
+    <div class="container py-4" style="padding: 5rem 0 !important;">
         <div class="row g-4">
             <!-- Card 1 -->
             <div class="col-md-3">
                 <a href="#" class="text-decoration-none">
                     <div class="card-custom">
                         <img src="assets/img/top-lime-pro-solo-rico.jpg" class="card-img" alt="Maçãs">
-                        <div class="icon-top"><img src="assets/img/icone1-solorico.jpg" alt="Ícone"></div>
+                        <div class="icon-top"><img src="assets/img/icones/icone1-solorico.png" width="70" alt="Ícone"></div>
                         <div class="text-overlay">
                             <h5 class="fw-bold">TOP LIME PRO</h5>
                         </div>
-                        <div class="icon-bottom">Linha de Adjuvantes</div>
+                        <div class="icon-bottom">LINHA DE ADJUVANTES</div>
                     </div>
                 </a>
             </div>
@@ -303,11 +316,11 @@
                 <a href="#" class="text-decoration-none">
                     <div class="card-custom">
                         <img src="assets/img/revolution-solo-rico.jpg" class="card-img" alt="Cesta de frutas">
-                        <div class="icon-top"><img src="assets/img/icone-revolution2-solorico.jpg" alt="Ícone"></div>
+                        <div class="icon-top"><img src="assets/img/icones/icone-revolution2-solorico.png" width="70" alt="Ícone"></div>
                         <div class="text-overlay">
                             <h5 class="fw-bold">REVOLUTION</h5>
                         </div>
-                        <div class="icon-bottom">Linha Protect</div>
+                        <div class="icon-bottom">LINHA PROTECT</div>
                     </div>
                 </a>
             </div>
@@ -317,12 +330,12 @@
                 <a href="#" class="text-decoration-none">
                     <div class="card-custom">
                         <img src="assets/img/terra.jpg" class="card-img" alt="Planta na mão">
-                        <div class="icon-top"><img src="assets/img/icone-gel-de-plantio3-solorico.jpg" alt="Ícone">
+                        <div class="icon-top"><img src="assets/img/icones/icone-gel-de-plantio3-solorico.png" width="70" alt="Ícone">
                         </div>
                         <div class="text-overlay">
                             <h5 class="fw-bold">GEL DE PLANTIO</h5>
                         </div>
-                        <div class="icon-bottom">Linha Titanium Sollus</div>
+                        <div class="icon-bottom">LINHA TITANIUM SOLLUS</div>
                     </div>
                 </a>
             </div>
@@ -332,11 +345,11 @@
                 <a href="#" class="text-decoration-none">
                     <div class="card-custom">
                         <img src="assets/img/uvas.jpg" class="card-img" alt="Uvas">
-                        <div class="icon-top"><img src="assets/img/icone-protetor-e700--solorico.jpg" alt="Ícone"></div>
+                        <div class="icon-top"><img src="assets/img/icones/icone-protetor-e700--solorico.png" width="70" alt="Ícone"></div>
                         <div class="text-overlay">
                             <h5 class="fw-bold">PROTETOR E700</h5>
                         </div>
-                        <div class="icon-bottom">Linha Protect</div>
+                        <div class="icon-bottom">LINHA PROTECT</div>
                     </div>
                 </a>
             </div>
@@ -344,9 +357,26 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.getElementById('navbarNav');
+
+            document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+                link.addEventListener('click', function () {
+                    const isNavbarExpanded = window.getComputedStyle(navbarToggler).display !== 'none' &&
+                        navbarCollapse.classList.contains('show');
+                    if (isNavbarExpanded) {
+                        navbarToggler.click();
+                    }
+                });
+            });
+        });
+    </script>
+
 
     <!-- Seção de Desenvolvimento Agricultura-->
-    <section class="development-section py-5">
+    <section class="development-section py-5" style="padding: 5rem 0 !important;">
         <div class="container text-center">
             <h2 class="section-heading">Há mais de 30 anos espalhando o verde pelo Brasil e agora também pelo mundo.
             </h2>
@@ -364,7 +394,7 @@
 
     <!-- Seção: Linhas de Produtos  -->
     <!-- Seção: Linhas de Produtos  -->
-    <section class="product-lines-section py-5">
+    <section class="product-lines-section py-5" style="padding: 5rem 0 !important;">
         <div class="container text-center">
             <h4 class="section-title text-warning fw-bold">Solo Rico</h4>
             <h2 class="section-heading fw-bold">Linhas de Produtos</h2>
@@ -427,60 +457,68 @@
         </div>
     </section>
 
-
-    <!-- Seção: News & Blogs -->
-    <section class="news-blogs-section py-5">
-        <div class="container text-center">
-            <h4 class="section-title">Solo Rico</h4>
-            <h2 class="section-heading">News & Blogs</h2>
-            <div class="row mt-4">
-                <!-- Blog Post 1 -->
-                <div class="col-12 col-md-4">
-                    <div class="blog-card">
-                        <img src="assets/img/div.master-news.png" alt="Notícia 1" class="blog-image">
-                        <div class="blog-body">
-                            <span class="blog-badge">AGRONEGÓCIO</span>
-                            <h5 class="blog-title">Agronegócio Brasileiro: Descubra o que irá Impulsionar o Crescimento
-                                em 2024...</h5>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog Post 2 -->
-                <div class="col-12 col-md-4">
-                    <div class="blog-card">
-                        <img src="assets/img/div.master-news(1).png" alt="Notícia 2" class="blog-image">
-                        <div class="blog-body">
-                            <span class="blog-badge">AGRÍCOLAS</span>
-                            <h5 class="blog-title">Tendências da Volatilidade dos Preços das Commodities Agrícolas em
-                                2024...</h5>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog Post 3 -->
-                <div class="col-12 col-md-4">
-                    <div class="blog-card">
-                        <img src="assets/img/div.master-news(2).png" alt="Notícia 3" class="blog-image">
-                        <div class="blog-body">
-                            <span class="blog-badge">MERCADO</span>
-                            <h5 class="blog-title">Novos Mercados: Abrindo Portas para Pequenos e Médios Produtores
-                                Brasileiros...</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
+ <!-- Seção: News & Blogs -->
+<section class="news-blogs-section py-5">
+  <div class="container">
+    <h4 class="section-title text-center">Solo Rico</h4>
+    <h2 class="section-heading text-center">News & Blogs</h2>
+    <div class="row mt-4 gx-4">
+  <!-- Blog Post 1 -->
+  <div class="col-12 col-md-4 mb-4">
+    <div class="blog-card border rounded h-100">
+      <a href="#" class="text-decoration-none text-dark d-block h-100">
+        <img src="assets/img/div.master-news.png" alt="Notícia 1" class="img-fluid w-100 blog-image">
+        <div class="blog-body">
+          <span class="blog-badge">AGRONEGÓCIO</span>
+          <h5 class="blog-title">Agronegócio Brasileiro: Descubra o que irá Impulsionar o Crescimento em 2024...</h5>
+          <p class="blog-description">Análise do cenário atual e as principais forças que vão moldar o futuro do agronegócio brasileiro.</p>
+          <small style="color: #ccc;">24 Junho 2024</small>
         </div>
-    </section>
+      </a>
+    </div>
+  </div>
+  <!-- Blog Post 2 -->
+  <div class="col-12 col-md-4 mb-4">
+    <div class="blog-card border rounded h-100">
+      <a href="#" class="text-decoration-none text-dark d-block h-100">
+        <img src="assets/img/div.master-news(1).png" alt="Notícia 2" class="img-fluid w-100 blog-image">
+        <div class="blog-body">
+          <span class="blog-badge">AGRÍCOLAS</span>
+          <h5 class="blog-title">Tendências da Volatilidade dos Preços das Commodities Agrícolas em 2024...</h5>
+          <p class="blog-description">Entenda os fatores econômicos e climáticos que impactam os preços das commodities.</p>
+          <small style="color: #ccc;">20 Junho 2024</small>
+        </div>
+      </a>
+    </div>
+  </div>
+  <!-- Blog Post 3 -->
+  <div class="col-12 col-md-4 mb-4">
+    <div class="blog-card border rounded h-100">
+      <a href="#" class="text-decoration-none text-dark d-block h-100">
+        <img src="assets/img/div.master-news(2).png" alt="Notícia 3" class="img-fluid w-100 blog-image">
+        <div class="blog-body">
+          <span class="blog-badge">MERCADO</span>
+          <h5 class="blog-title">Novos Mercados: Abrindo Portas para Pequenos e Médios Produtores Brasileiros...</h5>
+          <p class="blog-description">Como a Solo Rico está ajudando produtores a alcançar novos mercados com inovação e apoio técnico.</p>
+          <small style="color: #ccc;">15 Junho 2024</small>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
 
     <!-- Footer -->
-    <footer class="footer-section py-5">
+    <footer class="footer-section py-5" style="padding: 5rem 0;">
         <div class="container">
             <div class="row text-center mb-4">
                 <div class="col-12">
                     <img src="assets/img/div.elementor-element.png" alt="Logo Solo Rico" class="footer-logo mb-3">
                     <p class="footer-description mx-auto">
                         A Solo Rico Agrociências é uma empresa 100% brasileira, com sede em São José do Rio Preto,
-                        considerada uma das maiores produtoras de fertilizantes do Brasil. Atua em todos os Estados e no
-                        Distrito Federal.<br>
+                        considerada uma das maiores produtoras de fertilizantes do Brasil. Atua em todos os Estados e no Distrito Federal.<br>
                         Atendimento de segunda à sexta-feira, das 09h às 18h (exceto feriados).
                     </p>
                 </div>
@@ -541,23 +579,26 @@
                         <p><a href="mailto:contato@solorico.com.br" style="color: #ccc;">contato@solorico.com.br</a></p>
                     </div>
                     <div class="col-md-6 col-sm-12">
-  <h5 class="footer-heading">Assuntos mais lidos</h5>
-  <ul class="list-unstyled">
-    <li class="mb-3">
-      <a href="#">Agronegócio Brasileiro: Descubra o que irá Impulsionar o Crescimento em 2024...</a><br>
-      <small class="footer-date">Junho 2024</small>
-    </li>
-    <li class="mb-3">
-      <a href="#">Tendências da Volatilidade dos Preços das Commodities Agrícolas em 2024...</a><br>
-      <small class="footer-date">Maio 2024</small>
-    </li>
-    <li class="mb-3">
-      <a href="#">Novos Mercados: Abrindo Portas para Pequenos e Médios Produtores Brasileiros...</a><br>
-      <small class="footer-date">Abril 2024</small>
-    </li>
- 
-  </ul>
-</div>
+                        <h5 class="footer-heading">Assuntos mais lidos</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <a href="#">Agronegócio Brasileiro: Descubra o que irá Impulsionar o Crescimento em
+                                    2024...</a><br>
+                                <small class="footer-date">Junho 2024</small>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#">Tendências da Volatilidade dos Preços das Commodities Agrícolas em
+                                    2024...</a><br>
+                                <small class="footer-date">Maio 2024</small>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#">Novos Mercados: Abrindo Portas para Pequenos e Médios Produtores
+                                    Brasileiros...</a><br>
+                                <small class="footer-date">Abril 2024</small>
+                            </li>
+
+                        </ul>
+                    </div>
 
                     <div class="col-md-3 col-sm-6">
                         <h5 class="footer-heading">Categorias</h5>
@@ -596,7 +637,6 @@
     </a>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Alterar o cabeçalho ao rolar
         window.addEventListener('scroll', () => {
@@ -608,6 +648,7 @@
             }
         });
     </script>
+
 
 </body>
 
