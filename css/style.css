@@ -140,7 +140,8 @@
         /* Efeito de hover nos subitens */
         .navbar-nav .dropdown-item:hover {
             background-color: #f8f8f8;
-            color: #28a745; /* verde padrão */
+            color: #28a745;
+            /* verde padrão */
             /* Cor verde conforme o tema */
         }
 
@@ -153,13 +154,16 @@
 
             /* Cor do link no mobile */
             .navbar-nav .nav-link {
-                color: #e2e2e2; /* verde claro */
+                color: #e2e2e2;
+                /* verde claro */
             }
+
             .navbar-nav .nav-link:hover {
-                color: #28a745; /* verde claro */
+                color: #28a745;
+                /* verde claro */
             }
-         
-            
+
+
 
             /* Ajustando a exibição do dropdown para mobile */
             .navbar-nav .dropdown-menu {
@@ -207,7 +211,7 @@
             font-size: 0.9rem;
             line-height: 1.6;
             color: #bfbfbf;
-            max-width: 600px;
+            max-width: 700px;
         }
 
         .footer-heading {
@@ -366,7 +370,7 @@
             bottom: 10px;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 16px;
+            font-size: 14px;
             font-weight: bold;
             color: #fff;
             text-align: center;
@@ -912,6 +916,18 @@
             border-top-right-radius: 15px;
         }
 
+        .blog-card img {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            display: block;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-top: 8px;
+            /* ADICIONE ISSO */
+        }
+
+
         .blog-content {
             padding: 20px;
         }
@@ -1179,18 +1195,16 @@
             text-align: center;
             line-height: 60px;
             border-radius: 50%;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             z-index: 9999;
             transition: transform 0.3s ease;
         }
-        
+
         .whatsapp-float:hover {
             transform: scale(1.1);
             background-color: #1ebe57;
             color: white;
         }
-        
-        
 
 
         /* ícones rodapé */
@@ -1199,24 +1213,23 @@
             display: flex;
             gap: 15px;
         }
-        
+
         .social-icons a {
             color: #ffffff;
             font-size: 22px;
             transition: transform 0.3s ease, color 0.3s ease;
         }
-        
+
         .social-icons a:hover {
             transform: scale(1.2);
-            color: #25D366; /* ou outra cor que combine com o tema */
+            color: #25D366;
+            /* ou outra cor que combine com o tema */
         }
 
         /*forms*/
-        .mb-3{
+        .mb-3 {
             text-align: left;
         }
-        
-        
 
 
         /* Responsividade */

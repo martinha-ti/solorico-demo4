@@ -309,59 +309,48 @@
        margin-bottom: 30px;
    }
 
-   .blog-card {
-       background-color: white;
-       border-radius: 8px;
-       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-       overflow: hidden;
-       transition: transform 0.3s ease, box-shadow 0.3s ease;
-   }
+.blog-body {
+  padding: 15px;
+  text-align: left; /* Alinha tudo à esquerda */
+  position: relative;
+}
 
-   .blog-card:hover {
-       transform: scale(1.05);
-       /* Efeito de escala no hover */
-       box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-       /* Sombra mais intensa no hover */
-   }
+.blog-badge {
+  display: block;
+  background-color: #28a745;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
 
-   .blog-card .blog-image {
-       width: 100%;
-       height: auto;
-       display: block;
-   }
+.blog-title {
+  margin-top: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+  margin-bottom: 6px;
+}
 
-   .blog-body {
-       padding: 15px;
-       text-align: center;
-       /* Centraliza o conteúdo */
-       position: relative;
-   }
+.blog-card .blog-description {
+  font-size: 0.875rem;
+  color: #888;
+  text-align: left;
+}
+.blog-card img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-top: 8px; /* ADICIONE ISSO */
+}
 
-   .blog-badge {
-       display: inline-block;
-       background-color: #28a745;
-       /* Cor verde */
-       color: white;
-       font-size: 0.875rem;
-       font-weight: bold;
-       padding: 5px 10px;
-       border-radius: 20px;
-       position: absolute;
-       top: 15px;
-       /* Alinhado verticalmente sobre a imagem */
-       left: 50%;
-       /* Centraliza horizontalmente */
-       transform: translateX(-50%);
-       /* Garante centralização perfeita */
-   }
 
-   .blog-title {
-       margin-top: 55px;
-       font-size: 1rem;
-       font-weight: bold;
-       color: #333;
-       text-align: center;
-   }
 
    .footer-heading {
        margin-bottom: 1.5rem;
@@ -394,3 +383,17 @@
            background-color: rgba(43, 43, 43, 0.2) !important;
        }
    }
+
+/* Ajustes personalizados */
+.image-wrapper:first-child {
+    align-self: flex-start;
+    margin-left: 0;
+}
+.image-wrapper:last-child {
+    align-self: flex-end;
+    margin-right: 0;
+}
+.image-wrapper {
+    align-self: flex-start;
+    margin-top: 0;
+}
